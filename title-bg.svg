@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6eeff"/><stop offset="1" stop-color="#f1e9ff"/></linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ea2f2"/><stop offset="1" stop-color="#9a7ae6"/></linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#8aa2ec" opacity=".35"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+  <circle cx="1000" cy="330" r="170" fill="#fff" opacity=".45"/>
+
+  <!-- желі: түйіндер мен сызықтар -->
+  <g stroke="#9db4f0" stroke-width="2" opacity=".75" fill="none">
+    <path d="M80 540 L230 480 L380 560 L330 690 L80 540"/><path d="M380 560 L520 470 L700 440 L880 500 L1040 450 L1130 540"/>
+    <path d="M330 690 L520 740 L720 700 L900 740 L1130 690"/><path d="M880 500 L900 740"/><path d="M520 470 L520 740"/><path d="M1040 450 L1130 540 L1130 690"/>
+  </g>
+  <g fill="#7ea2f2">
+    <circle cx="80" cy="540" r="9"/><circle cx="230" cy="480" r="11"/><circle cx="380" cy="560" r="9"/><circle cx="330" cy="690" r="10"/>
+    <circle cx="520" cy="470" r="10"/><circle cx="700" cy="440" r="9"/><circle cx="880" cy="500" r="11"/><circle cx="1040" cy="450" r="10"/>
+    <circle cx="1130" cy="540" r="9"/><circle cx="1130" cy="690" r="10"/><circle cx="520" cy="740" r="9"/><circle cx="720" cy="700" r="8"/><circle cx="900" cy="740" r="10"/>
+  </g>
+  <g fill="#9a7ae6">
+    <circle cx="230" cy="480" r="11"><animate attributeName="r" values="11;17;11" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.35;1" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="440" r="9"><animate attributeName="r" values="9;15;9" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.35;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="1130" cy="690" r="10"><animate attributeName="r" values="10;16;10" dur="3.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;.35;1" dur="3.6s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- бұлт және жүктеу -->
+  <g>
+    <path d="M880 500 L800 560" stroke="#7b93e4" stroke-width="3" stroke-dasharray="6 8" fill="none"><animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1.6s" repeatCount="indefinite"/></path>
+    <g transform="translate(930 400)">
+      <circle cx="30" cy="62" r="30" fill="#fff"/><circle cx="76" cy="40" r="42" fill="#fff"/><circle cx="124" cy="64" r="30" fill="#fff"/><rect x="30" y="62" width="94" height="30" fill="#fff"/>
+      <path d="M76 82 V46 M60 62 L76 46 L92 62" stroke="#7b93e4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"><animateTransform attributeName="transform" type="translate" values="0 3;0 -4;0 3" dur="2s" repeatCount="indefinite"/></path>
+    </g>
+  </g>
+
+  <!-- планшет -->
+  <g transform="rotate(-8 190 670)">
+    <rect x="96" y="590" width="190" height="136" rx="16" fill="#5f7ad8"/><rect x="108" y="602" width="166" height="112" rx="8" fill="#eef2ff"/>
+    <circle cx="150" cy="640" r="20" fill="#c9d8f6"/><path d="M143 631 L162 640 L143 649Z" fill="#5f7ad8"/>
+    <rect x="182" y="628" width="76" height="8" rx="4" fill="#9db4f0"/><rect x="182" y="646" width="56" height="8" rx="4" fill="#c9d8f6"/>
+    <rect x="124" y="676" width="134" height="8" rx="4" fill="#c9d8f6"/><rect x="124" y="676" width="86" height="8" rx="4" fill="#7ea2f2"/>
+  </g>
+
+  <!-- ноутбук -->
+  <rect x="440" y="520" width="320" height="200" rx="16" fill="#4f6acb"/>
+  <rect x="454" y="534" width="292" height="172" rx="7" fill="#eef2ff"/>
+  <rect x="454" y="534" width="292" height="24" rx="7" fill="#c9d8f6"/>
+  <circle cx="472" cy="546" r="4" fill="#9a7ae6"/><circle cx="486" cy="546" r="4" fill="#7ea2f2"/><circle cx="500" cy="546" r="4" fill="#9db4f0"/>
+  <g fill="url(#bar)"><rect x="476" y="650" width="22" height="42" rx="4"/><rect x="508" y="626" width="22" height="66" rx="4"/><rect x="540" y="600" width="22" height="92" rx="4"/><rect x="572" y="576" width="22" height="116" rx="4"/></g>
+  <circle cx="676" cy="618" r="36" fill="none" stroke="#c9d8f6" stroke-width="12"/>
+  <circle cx="676" cy="618" r="36" fill="none" stroke="#7b93e4" stroke-width="12" stroke-linecap="round" stroke-dasharray="150 227" transform="rotate(-90 676 618)"><animate attributeName="stroke-dasharray" values="30 227;170 227;30 227" dur="6s" repeatCount="indefinite"/></circle>
+  <rect x="624" y="676" width="104" height="7" rx="3.5" fill="#9db4f0"/><rect x="624" y="690" width="70" height="7" rx="3.5" fill="#c9d8f6"/>
+  <polygon points="410,720 790,720 812,744 388,744" fill="#8aa2ec"/><rect x="560" y="720" width="80" height="8" rx="4" fill="#6f8be0"/>
+
+  <!-- бітіруші қалпағы -->
+  <g>
+    <polygon points="600,432 692,464 600,496 508,464" fill="#4f6acb"/>
+    <path d="M548 486 V512 C548 528 652 528 652 512 V486 L600 504Z" fill="#5f7ad8"/>
+    <path d="M684 468 V514" stroke="#9a7ae6" stroke-width="4" stroke-linecap="round"/><circle cx="684" cy="520" r="6" fill="#9a7ae6"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Wi-Fi -->
+  <g fill="none" stroke="#9a7ae6" stroke-width="6" stroke-linecap="round" opacity=".8">
+    <path d="M800 548 a28 28 0 0 1 36 -26"/><path d="M800 520 a52 52 0 0 1 66 -46"/><circle cx="804" cy="572" r="5" fill="#9a7ae6" stroke="none"/>
+  </g>
+
+  <!-- смартфон және код -->
+  <rect x="936" y="610" width="74" height="126" rx="14" fill="#5f7ad8"/><rect x="945" y="622" width="56" height="94" rx="6" fill="#eef2ff"/>
+  <rect x="952" y="632" width="42" height="7" rx="3.5" fill="#9db4f0"/><rect x="952" y="648" width="30" height="7" rx="3.5" fill="#c9d8f6"/>
+  <g fill="url(#bar)"><rect x="952" y="682" width="9" height="24" rx="2"/><rect x="966" y="670" width="9" height="36" rx="2"/><rect x="980" y="660" width="9" height="46" rx="2"/></g>
+  <g fill="none" stroke="#7b93e4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1066 600 L1038 632 L1066 664"/><path d="M1114 600 L1142 632 L1114 664"/><path d="M1102 592 L1078 672" stroke="#9a7ae6"/>
+  </g>
+  <rect y="744" width="1200" height="56" fill="#4f6acb"/>
+</svg>

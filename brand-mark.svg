@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Білім берудегі цифрлық технологиялар белгісі</title>
+  <defs>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="232" height="232" rx="58" fill="url(#book)"/>
+  <path d="M58 76c25-9 48-5 70 13v91c-22-17-45-21-70-12V76Zm140 0c-25-9-48-5-70 13v91c22-17 45-21 70-12V76Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M78 101c13-3 26-1 38 6M78 123c13-3 26-1 38 6M178 101c-13-3-26-1-38 6M178 123c-13-3-26-1-38 6" fill="none" stroke="#e8eaff" stroke-linecap="round" stroke-width="6"/>
+  <circle cx="202" cy="58" r="10" fill="#e9d5ff"/>
+  <circle cx="221" cy="42" r="6" fill="#e9d5ff"/>
+  <circle cx="224" cy="68" r="5" fill="#bfdbfe"/>
+</svg>

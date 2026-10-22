@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Білім берудегі цифрлық технологиялар: университет студенттеріне арналған интерактивті қазақша электрондық оқулық.">
+  <title>Білім берудегі цифрлық технологиялар — электрондық оқулық</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="brand-mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Негізгі мазмұнға өту</a>
+  <header class="topbar">
+    <button class="icon-button mobile-menu-button" id="menu-toggle" type="button" aria-label="Навигация мәзірін ашу" aria-expanded="false" aria-controls="left-sidebar">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <a class="brand" href="#home" data-view="home" aria-label="Оқулықтың басты беті">
+      <span class="brand-mark" aria-hidden="true"><span>▱</span><i>•</i></span>
+      <span class="brand-name">Білім берудегі<br><strong>цифрлық технологиялар</strong></span>
+    </a>
+    <div class="topbar-progress" aria-label="Оқу барысы">
+      <div class="topbar-progress-copy"><span>Оқу барысы</span><strong id="header-progress-label">0%</strong></div>
+      <div class="progress-track"><span id="header-progress-bar"></span></div>
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-button" id="search-toggle" type="button" aria-label="Оқулықтан іздеу" title="Іздеу">⌕</button>
+      <button class="icon-button" id="reader-toggle" type="button" aria-label="Оқу режимін қосу" aria-pressed="false" title="Оқу режимі">◫</button>
+      <button class="icon-button panel-toggle-top" id="progress-toggle" type="button" aria-label="Оқу барысы панелін ашу" aria-expanded="false" title="Оқу барысы">▤</button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Қою тақырыпты қосу" aria-pressed="false" title="Тақырыпты ауыстыру">◐</button>
+    </div>
+    <div class="search-popover" id="search-panel" hidden>
+      <label for="global-search">Оқулықтан іздеу</label>
+      <div class="search-input-row"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Мысалы: цифрлық сауаттылық" autocomplete="off"><button class="icon-button small" id="close-search" type="button" aria-label="Іздеуді жабу">×</button></div>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <div class="app-shell" id="app-shell">
+    <div class="drawer-scrim" id="drawer-scrim" hidden></div>
+    <aside class="left-sidebar" id="left-sidebar" aria-label="Оқулық навигациясы">
+      <div class="sidebar-top">
+        <div class="sidebar-kicker">ОҚУ МАТЕРИАЛЫ</div>
+        <button class="nav-link" type="button" data-view="title"><span class="nav-icon" aria-hidden="true">❡</span><span>Титул беті</span></button>
+        <button class="nav-link home-nav active" type="button" data-view="home"><span class="nav-icon" aria-hidden="true">⌂</span><span>Басты бет</span></button>
+      </div>
+      <div class="sidebar-label-row"><span>ТАРАУЛАР</span><span class="sidebar-count">07</span></div>
+      <nav id="chapter-nav" class="chapter-nav" aria-label="Жеті тарау"></nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-label-row"><span>ҚОСЫМША БӨЛІМДЕР</span></div>
+      <nav class="utility-nav" aria-label="Қосымша бөлімдер">
+        <button class="nav-link" type="button" data-view="practicals"><span class="nav-icon" aria-hidden="true">▧</span><span>Практикалық жұмыстар</span></button>
+        <button class="nav-link" type="button" data-view="exam"><span class="nav-icon" aria-hidden="true">✓</span><span>Тестілеу орталығы</span></button>
+        <button class="nav-link" type="button" data-view="glossary"><span class="nav-icon" aria-hidden="true">Aa</span><span>Глоссарий</span></button>
+        <button class="nav-link" type="button" data-view="references"><span class="nav-icon" aria-hidden="true">↗</span><span>Әдебиеттер</span></button>
+        <button class="nav-link" type="button" data-view="bookmarks"><span class="nav-icon" aria-hidden="true">☆</span><span>Бетбелгілер</span><span class="nav-badge" id="bookmark-count">0</span></button>
+        <button class="nav-link" type="button" data-view="authors"><span class="nav-icon" aria-hidden="true">✦</span><span>Авторлар туралы</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help-icon" aria-hidden="true">i</div>
+        <div><strong>Оқу кеңесі</strong><p>Үлгерімді өз қарқыныңызбен бақылаңыз.</p></div>
+        <button class="sidebar-settings" id="settings-button" type="button" aria-label="Оқу баптаулары">⚙</button>
+      </div>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+      <div id="content" class="content-inner" aria-live="off"></div>
+    </main>
+
+    <aside class="right-sidebar" id="progress-sidebar" aria-label="Оқу барысы мен бөлімдер">
+      <div class="right-panel-head"><span class="eyebrow">ЖЕКЕ ОҚУ ПАНЕЛІ</span><button class="icon-button small panel-collapse" id="panel-toggle" type="button" aria-label="Оң жақ панельді жию" aria-expanded="true">−</button></div>
+      <div class="right-panel-body" id="right-panel-body">
+        <section class="progress-card" aria-labelledby="progress-card-title">
+          <h2 id="progress-card-title">Оқу прогресі</h2>
+          <div class="ring-wrap">
+            <svg class="progress-ring" viewBox="0 0 120 120" role="img" aria-label="Оқулық бойынша жалпы прогресс">
+              <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+              <circle class="ring-value" id="ring-value" cx="60" cy="60" r="50"></circle>
+            </svg>
+            <div class="ring-label"><strong id="ring-percent">0%</strong><span>аяқталды</span></div>
+          </div>
+          <div class="stat-pair"><div><strong id="completed-chapters">0/7</strong><span>тарау оқылды</span></div><div><strong id="completed-quizzes">0</strong><span>тест аяқталды</span></div></div>
+        </section>
+        <section class="mini-stat-card"><div class="mini-icon purple" aria-hidden="true">◷</div><div><span>Жуық оқу уақыты</span><strong id="study-time">Мазмұн жүктелуде</strong></div></section>
+        <section class="mini-stat-card"><div class="mini-icon blue" aria-hidden="true">✓</div><div><span>Соңғы тест нәтижесі</span><strong id="current-quiz-result">Әзірге тест тапсырылмады</strong></div></section>
+        <section class="context-card" id="context-section-list"><div class="section-heading-row"><h2>Осы тарауда</h2></div><p class="muted small-copy">Тарауды таңдағанда бөлімдер осында көрсетіледі.</p><div id="context-sections"></div></section>
+        <section class="recent-card"><div class="section-heading-row"><h2>Соңғы белсенділік</h2><span class="live-dot" aria-label="Жергілікті сақталған дерек"></span></div><div id="recent-activity" class="recent-activity"><span class="activity-icon">·</span><p>Оқу басталғаннан кейін соңғы әрекетіңіз осында көрінеді.</p></div></section>
+        <button class="text-action" type="button" data-view="bookmarks">Бетбелгілерге өту <span aria-hidden="true">→</span></button>
+      </div>
+    </aside>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="content.js"></script>
+  <script src="content-enhancements.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
